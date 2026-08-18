@@ -1,4 +1,4 @@
-name: Check Movie Status 🎫
+name: Check show times 🎫
 
 on:
   # schedule:
