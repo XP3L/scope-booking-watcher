@@ -1,4 +1,4 @@
-name: Check Spider-Man Booking Status
+name: Check Movie Status 🎫
 
 on:
   # schedule:
