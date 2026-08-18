@@ -14,12 +14,12 @@ State is kept in state.txt so we only notify ONCE (not on every run).
 import sys
 import urllib.request
 
-MOVIE_URL = "https://www.scopecinemas.com/movies/spider-man-brand-new-day"
-SHOWTIMES_URL = "https://www.scopecinemas.com/movies/spider-man-brand-new-day/showtimes"
+MOVIE_URL = "https://www.scopecinemas.com/movies/insidious-out-of-the-further"
+SHOWTIMES_URL = "https://www.scopecinemas.com/movies/insidious-out-of-the-further/showtimes"
 
 # Set this to a unique, hard-to-guess topic name. Anyone who knows this
 # topic name can read your notifications, so keep it non-obvious.
-NTFY_TOPIC = "spiderman-bnd-booking-alert-lk-8f2k1"
+NTFY_TOPIC = "insidious-ootf-booking-alert-lk-8f2k1"
 
 STATE_FILE = "state.txt"
 
@@ -56,7 +56,7 @@ def is_showtimes_active(html: str) -> bool:
 
 def send_notification():
     message = (
-        "Booking is OPEN for SPIDER-MAN: BRAND NEW DAY at Scope Cinemas! "
+        "Booking is OPEN for INSIDIOUS: OUT OF THE FURTHER at Scope Cinemas! "
         f"Go book now: {MOVIE_URL}"
     )
     req = urllib.request.Request(
@@ -65,7 +65,7 @@ def send_notification():
         headers={
             "Title": "Spider-Man tickets are live!",
             "Priority": "urgent",
-            "Tags": "spider,tickets",
+            "Tags": "ghost,tickets",
         },
         method="POST",
     )
